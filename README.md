@@ -3,9 +3,7 @@ Lots of people have the problem of waking up and not feeling refreshed. Some say
 
 Within this mobile app, there is two screens. On the fist, you are able to input the time you want to go to bed. Then, it directs you to the next page, where you can push a button and get all of the best times for you to wake up. The second screen also provides more information about REM Cycles, what cycles are the best to wake up in, and how early you should head to bed.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the app running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/f4JwJ_eQMio)
 
 # Development Environment
 I used the following to develop this mobile app:
