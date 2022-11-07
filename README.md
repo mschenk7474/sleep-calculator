@@ -9,7 +9,7 @@ Within this mobile app, there is two screens. On the fist, you are able to input
 I used the following to develop this mobile app:
 * XCode - IDE
 * Swift - Language
-* SwiftUi - Framework
+* SwiftUI - Framework
 
 # Useful Websites
 * [Numbers Only TextField in SwiftUi](https://programmingwithswift.com/numbers-only-textfield-with-swiftui/)
