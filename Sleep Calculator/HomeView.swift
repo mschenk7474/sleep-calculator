@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
+    // declaration of variables to be passed to next view
     @State var hours: String = ""
     @State var mins: String = ""
     @State var selection = 1
@@ -16,6 +17,7 @@ struct HomeView: View {
     @State var totalTime: String = " "
     @State var cycles: [(String)] = [" "]
     func timecalc(selection: Int){
+        // get's the correct time period to be bassed
         if (selection == 2){
             self.timeperiod = "A.M."
         }
