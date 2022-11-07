@@ -5,14 +5,11 @@
 //  Created by Mason Schenk on 11/1/22.
 //
 
-/*7 90 minute Cycles with 5 and 6 being highlighted
- upper limits of time are 720 mins
- lower limits are 0 of course*/
-
 import Foundation
 import SwiftUI
 
 struct CalculatedView: View {
+ // variables brought over from other view
     @Binding var hours: String
     @Binding var mins: String
     @Binding var timeperiod: String
@@ -20,6 +17,8 @@ struct CalculatedView: View {
     @Binding var cycles: [(String)]
     
     func cyclecal(time: String) -> [(String)]{
+     /* calculates all of the cycle times and 
+     returns it to display to the user*/
         var intHours = Int(self.hours) ?? 0
         let intMins = Int(self.mins) ?? 0
         var cycleList = [String]()
@@ -32,8 +31,8 @@ struct CalculatedView: View {
             }
         }
         
+        // gets all the time in minutes
         let hoursConvert = intHours * 60
-        // all the time in minutes correct
         let tTime = hoursConvert + intMins
         
         
@@ -43,9 +42,8 @@ struct CalculatedView: View {
         /* Convert cycle times back into normal times*/
         cyclesConList = convertCycles(cycleList: cycleList)
         
-        /* Return cycles list to be outputted to the user!*/
+        /* Return cycles list to be outputted to the user*/
         return cyclesConList
-//        self.totalTime = String(tTime)
         
     }
     
@@ -73,6 +71,7 @@ struct CalculatedView: View {
         var cyclesConverted = [String]()
         var count = 0
         for cycle in cycleList{
+            // check to see if it is A.M or P.M.
             if (Int(cycle) ?? 0 < 720){
                 self.timeperiod = "A.M."
             }
@@ -84,7 +83,6 @@ struct CalculatedView: View {
             var hours = Int(self.hours)
             // hour check, if greater than 12 and less than 24, minus 12 off hours
             if (Int(self.hours) ?? 0 > 12 && Int(self.hours) ?? 0 < 24){
-                //Int(self.hours) ?? 0 -= 12
                 hours! -= 12
                 
             }
@@ -95,7 +93,7 @@ struct CalculatedView: View {
                 self.mins = "00"
             }
             
-            // add for every 01, 02, 03
+            // needed to add 0 for every single digit
             else if (self.mins == "1"){
                 self.mins = "01"
             }
@@ -138,7 +136,7 @@ struct CalculatedView: View {
             }
             
             
-            
+            // gets the cycle count on there as well
             count += 1
             let time = String(count) + ". " + self.hours + ":" + self.mins + " " + self.timeperiod
             cyclesConverted.append(time)
@@ -147,7 +145,7 @@ struct CalculatedView: View {
     }
     var body: some View {
         VStack{
-            // create another variable to pass to cycle instead of time
+            // gets the time from the user in the format we need to pass it to cyclecal
             let time = self.hours + ":" + self.mins + " " + self.timeperiod
             Text("Welcome to the Calculations page!").fontWeight(.bold)
             
@@ -158,7 +156,6 @@ struct CalculatedView: View {
             Text(" ")
             
             Text("Also, give yourself 15 minutes before you go to bed to make sure you are in bed at the time inputted on the screen previous, as it takes most people anywhere from 5-15 minutes to fall asleep on any given night.").font(.system(size: 15))
-            
             
             Button(action:{
                 self.cycles = cyclecal(time: time)
