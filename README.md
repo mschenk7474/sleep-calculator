@@ -12,6 +12,8 @@ I used the following to develop this mobile app:
 * SwiftUI - Framework
 
 # Useful Websites
+* [Swift Tutorial](https://www.youtube.com/watch?v=comQ1-x2a1Q)
+* [Swift Documentation](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)
 * [Numbers Only TextField in SwiftUi](https://programmingwithswift.com/numbers-only-textfield-with-swiftui/)
 * [SwiftUI List](https://stackoverflow.com/questions/57031261/simple-swiftui-list-example-what-am-i-doing-wrong)
 * [Creating Dropdown Button in SwiftUI](https://stackoverflow.com/questions/56513339/is-there-a-way-to-create-a-dropdown-menu-button-in-swiftui)
